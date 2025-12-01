@@ -26,7 +26,7 @@ export default function GlassNav({ className = "" }: GlassNavProps) {
       transition={{ duration: 0.25, ease: snappyEase }}
       className={`
         flex items-center
-        w-full h-[50px]
+        h-[50px]
         px-[20px]
         rounded-full
         bg-transparent
@@ -34,6 +34,9 @@ export default function GlassNav({ className = "" }: GlassNavProps) {
         gap-[10px]
         ${className}
       `}
+      style={{
+        width: 'min(1200px, calc(100vw - 140px))',
+      }}
     >
       {/* Logo */}
       <motion.a
