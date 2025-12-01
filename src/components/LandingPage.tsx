@@ -121,9 +121,13 @@ export default function LandingPage() {
           variants={mobileContainerVariants}
           initial="hidden"
           animate="visible"
-          className="relative z-10 flex flex-col items-center min-h-screen pt-5 px-5 pb-0"
+          className="relative z-10 flex flex-col items-center min-h-screen pt-5 px-[40px] pb-0 w-full"
+          style={{
+            paddingLeft: 'clamp(24px, 10vw, 40px)',
+            paddingRight: 'clamp(24px, 10vw, 40px)',
+          }}
         >
-          {/* Glass Navigation Bar */}
+          {/* Glass Navigation Bar - wider, responsive to window size */}
           <motion.nav
             variants={mobileItemVariants}
             className="w-full h-[50px] px-5 rounded-full bg-black/5 border border-white/90 backdrop-blur-sm flex items-center gap-2.5"
